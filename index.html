@@ -12,6 +12,16 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="manifest" href="manifest.json">
   <title>NotaAgora — Painel do negócio</title>
+  <script>
+    // O SDK recebe consentimento apenas após a escolha nas configurações do app.
+    window['ga-disable-G-5HRL69Y4FY'] = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied'
+    });
+  </script>
   <style>
     body { margin: 0; background: #F5F7FA; color: #163448; font-family: Arial, sans-serif; }
     #loading { display: grid; min-height: 100vh; place-content: center; text-align: center; }
