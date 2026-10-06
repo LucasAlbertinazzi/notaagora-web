@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Conheça o NotaAgora: gestão de pequenos negócios, aplicativo, painel web e próximos passos de infraestrutura e integração fiscal.">
+  <meta name="description" content="Conheça o NotaAgora para comércio, e-commerce e prestação de serviços: clientes, orçamentos, vendas, caixa e financeiro. Veja telas reais e o plano de emissão de notas.">
   <meta name="theme-color" content="#112431">
-  <title>NotaAgora — Conheça o projeto</title>
+  <title>NotaAgora — Gestão para comércio e serviços</title>
   <style>
     :root{color-scheme:light;--ink:#112431;--muted:#526774;--mint:#086f61;--line:#d7e1e4;--paper:#f5f8f8;--white:#fff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    *{box-sizing:border-box}html{scroll-padding-top:90px}
     body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
     a{color:var(--mint);text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #159a8b;outline-offset:5px}
     .skip{position:absolute;top:-80px;left:16px;background:white;padding:12px;z-index:10}.skip:focus{top:12px}
@@ -29,43 +29,45 @@
     figure{margin:0}figure img{display:block;width:100%;height:auto;background:#112431;border:1px solid var(--line);border-radius:10px}figcaption{font-size:14px;color:var(--muted);padding:12px 0 24px}
     .phones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;width:min(660px,100%);margin:30px auto}.phones img{max-height:660px;object-fit:contain}
     .gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px}.gallery .wide{grid-column:1/-1}
-    .architecture{background:var(--ink);color:white;border-radius:12px;padding:32px;margin:30px 0}.architecture .label{color:#74d5be}.architecture p{color:#c5d7df}.architecture .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:18px;font-size:16px}.flow strong{display:block}.flow small{display:block;color:#c5d7df}
+    .example{border-top:1px solid var(--line);margin-top:18px;padding-top:18px;font-size:15px;color:var(--muted)}
+    .fiscal-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;counter-reset:step;padding:0;margin:28px 0}.fiscal-steps li{counter-increment:step}.fiscal-steps li::before{content:counter(step,decimal-leading-zero);display:block;font-size:13px;font-weight:750;color:var(--mint);margin-bottom:18px}
+    .invitation{background:var(--ink);color:white;border-radius:12px;padding:32px;margin:24px 0}.invitation p{color:#d3e1e6}.invitation .button{background:#b5ead9;color:var(--ink)}
     .callout{background:#edf4f1;border-left:4px solid var(--mint);padding:22px 26px;border-radius:0 8px 8px 0;margin:24px 0}.callout p:last-child{margin:0}
     details{border-top:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-weight:650}details p{margin:14px 0 0;color:var(--muted)}
     footer{padding:32px 0 48px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
-    @media(max-width:760px){.wrap{width:calc(100% - 32px)}.top{align-items:flex-start;flex-direction:column;gap:10px}nav{gap:16px}.hero{padding-top:45px}h1{letter-spacing:-1.8px}.lead{font-size:19px}.grid,.two,.gallery{grid-template-columns:1fr}.gallery .wide{grid-column:auto}.card{padding:22px}section{padding:40px 0}.architecture{padding:24px}.architecture .flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:start}.phones{gap:16px}.phones img{max-height:none}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media(max-width:760px){html{scroll-padding-top:160px}.wrap{width:calc(100% - 32px)}.top{align-items:flex-start;flex-direction:column;gap:10px}nav{gap:16px}.hero{padding-top:45px}h1{letter-spacing:-1.8px}.lead{font-size:19px}.grid,.two,.gallery,.fiscal-steps{grid-template-columns:1fr}.gallery .wide{grid-column:auto}.card{padding:22px}section{padding:40px 0}.invitation{padding:24px}.phones{gap:16px}.phones img{max-height:none}}
+    @media(max-width:480px){.phones{grid-template-columns:1fr;max-width:320px}}
     @media print{header{position:static}nav,.actions{display:none}body{background:white;font-size:12px}.hero,section{padding:20px 0}.card,figure{break-inside:avoid}.phones img{max-height:400px}h1{font-size:38px}}
   </style>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-  <header><div class="wrap top"><a class="brand" href="#conteudo">Nota<span>Agora</span></a><nav aria-label="Seções da apresentação"><a href="#produto">Produto</a><a href="#telas">Telas</a><a href="#tecnologia">Tecnologia</a><a href="#colaboracao">Colaboração</a></nav></div></header>
+  <header><div class="wrap top"><a class="brand" href="#conteudo">Nota<span>Agora</span></a><nav aria-label="Seções da apresentação"><a href="#produto">Seu negócio</a><a href="#telas">Telas reais</a><a href="#emissao">Emissão de notas</a><a href="#demonstracao">Demonstração</a></nav></div></header>
   <main id="conteudo" class="wrap">
     <div class="hero">
-      <div class="eyebrow">Conheça o projeto · Outubro de 2026</div>
-      <h1>Do serviço à nota.<br>Da venda à gestão.</h1>
-      <p class="lead">Um aplicativo e um painel web para ajudar pequenos negócios a organizar clientes, orçamentos, vendas, caixa e financeiro em um só lugar.</p>
+      <div class="eyebrow">Comércio · E-commerce · Prestação de serviços</div>
+      <h1>Seu negócio organizado.<br>Do atendimento à gestão.</h1>
+      <p class="lead">Clientes, orçamentos, vendas, caixa e financeiro em um aplicativo e um painel web. Conheça o NotaAgora e veja como seus fluxos podem apoiar a rotina do seu negócio.</p>
       <span class="status">Em desenvolvimento · Demonstração funcional</span>
-      <div class="actions"><a class="button" href="#telas">Ver o aplicativo e o painel</a><a class="button secondary" href="https://lucasalbertinazzi.github.io/notaagora-web/" target="_blank" rel="noopener noreferrer">Abrir o painel ↗</a></div>
-      <p class="note">A apresentação abre sem conta. O painel conectado exige login e acesso a um estabelecimento. A emissão fiscal ainda será integrada e homologada.</p>
+      <div class="actions"><a class="button" href="#telas">Conhecer o aplicativo e o painel</a><a class="button secondary" href="#emissao">Entender o plano de emissão de notas</a></div>
+      <p class="note">Prévia comercial de um produto em desenvolvimento. Emissão fiscal autorizada e integração automática com lojas virtuais ainda não estão disponíveis.</p>
     </div>
     <section id="produto">
-      <div class="eyebrow">01 / A ideia</div><h2>Organizar a operação antes de crescer.</h2>
-      <p class="intro">Pequenos prestadores e comerciantes frequentemente dividem o trabalho entre mensagens, anotações e planilhas. O NotaAgora busca conectar o atendimento à gestão, mantendo o celular e o navegador como portas de entrada para o mesmo negócio.</p>
+      <div class="eyebrow">01 / Para a rotina do seu negócio</div><h2>Menos informação espalhada.<br>Mais clareza para trabalhar.</h2>
+      <p class="intro">De um orçamento de serviço ao atendimento no comércio, a proposta é reunir os registros da operação e facilitar a conferência dos valores. Para quem vende pela internet, o foco inicial é a organização interna com cadastros e lançamentos manuais.</p>
       <div class="grid">
-        <article class="card"><span class="number">SERVIÇOS</span><h3>Do cliente ao orçamento</h3><p>Cadastro de clientes, catálogo por categoria, itens e descontos, condições de pagamento e versões preservadas para compartilhar pelo WhatsApp.</p></article>
-        <article class="card"><span class="number">COMÉRCIO</span><h3>Da venda ao caixa</h3><p>Produtos, atendimento por cliques, quantidade, pagamento e troco. Abertura, movimentação e fechamento com conferência do dinheiro.</p></article>
-        <article class="card"><span class="number">GESTÃO</span><h3>Do movimento à visão geral</h3><p>Receitas, despesas, valores previstos e confirmações manuais. O painel apresenta indicadores e o movimento financeiro do estabelecimento.</p></article>
+        <article class="card"><span class="number">PRESTAÇÃO DE SERVIÇOS</span><h3>Orçamentos mais organizados</h3><p>Reúna cliente, serviços, materiais, descontos e condições de pagamento. Preserve versões e compartilhe o orçamento em texto pelo WhatsApp.</p><p class="example"><strong>Exemplo fictício:</strong> manutenção de R$ 180 + material de R$ 45 − desconto de R$ 25 = orçamento de R$ 200.</p></article>
+        <article class="card"><span class="number">COMÉRCIO</span><h3>Atendimento e caixa à vista</h3><p>Selecione produtos, confira quantidades e registre o pagamento. Veja o troco e acompanhe abertura, movimentações e fechamento do caixa.</p><p class="example"><strong>Exemplo das telas:</strong> 2 itens de R$ 3,50 = R$ 7. Recebendo R$ 20 em dinheiro, o troco é R$ 13.</p></article>
+        <article class="card" id="ecommerce"><span class="number">E-COMMERCE</span><h3>Organização além da loja virtual</h3><p>Use os cadastros e o financeiro para organizar informações e despesas registradas manualmente. Importação de pedidos, checkout, frete e integrações com plataformas ainda não estão disponíveis.</p><p class="example"><strong>Exemplo de uso:</strong> cadastrar itens e lançar despesas da operação para acompanhar os valores no painel.</p></article>
       </div>
       <div class="two">
-        <article class="card"><p class="label">Disponível na base atual</p><ul class="list"><li>App Android e painel Flutter Web.</li><li>Contas, empresas, equipe e permissões.</li><li>Clientes, catálogo, orçamentos, vendas e caixa.</li><li>Financeiro e compartilhamento de dados no modo conectado.</li><li>Solicitações de nota, lotes e cadastro fiscal preparatório.</li><li>Temas claro/escuro e biometria mobile em aparelhos compatíveis.</li></ul></article>
-        <article class="card"><p class="label">Próximas entregas</p><ul class="list"><li>Provedor e homologação de emissão fiscal.</li><li>Certificados, consultas, recuperação e eventos fiscais.</li><li>Estoque, compras, estornos e pagamentos divididos.</li><li>PDF, aceite e ordens de serviço.</li><li>Ambientes, backups, monitoramento e operação de produção.</li><li>Distribuição assinada e validação física completa de iOS.</li></ul></article>
+        <article class="card" id="atual"><p class="label">Implementado para demonstração</p><ul class="list"><li>Aplicativo Android e painel web.</li><li>Clientes, catálogo e orçamentos com compartilhamento em texto.</li><li>Produtos, vendas, pagamentos e controle de caixa.</li><li>Receitas, despesas e confirmações manuais no financeiro.</li><li>Contas, empresas, equipe e permissões no modo conectado.</li><li>Cadastro fiscal, solicitações e lotes preparatórios.</li></ul></article>
+        <article class="card" id="planejado"><p class="label">Planejado · ainda indisponível</p><ul class="list"><li>Emissão de notas autorizadas, após integração e homologação.</li><li>Consulta, documentos e eventos fiscais.</li><li>Estoque, compras, estornos e pagamentos divididos.</li><li>PDF de orçamento, aceite e ordens de serviço.</li><li>Integrações com lojas virtuais, a definir por plataforma.</li><li>Preparação de produção e distribuição comercial do app.</li></ul></article>
       </div>
     </section>
     <section id="telas">
       <div class="eyebrow">02 / O produto na tela</div><h2>Uma experiência para cada momento.</h2>
-      <p class="intro">Capturas reais realizadas em 6 de outubro de 2026. Os prints mobile vêm do Samsung de teste, em telas sem dados pessoais. As telas web usam uma demonstração local isolada com dados fictícios; elas ilustram os fluxos e não comprovam sincronização entre dispositivos.</p>
+      <p class="intro">Telas reais do aplicativo Android e do painel web, capturadas em 6 de outubro de 2026. O celular mostra um formulário de orçamento e um catálogo vazio; o painel demonstra uma venda com produtos fictícios.</p>
       <div class="phones">
         <figure><a href="assets/mobile-orcamento.png"><img src="assets/mobile-orcamento.png" alt="Aplicativo Android: novo orçamento com cliente, itens, descontos, total e pagamentos" width="1080" height="2408" loading="lazy"></a><figcaption><strong>Orçamentos no celular.</strong> Seleção de cliente, itens e condições em uma tela responsiva.</figcaption></figure>
         <figure><a href="assets/mobile-catalogo.png"><img src="assets/mobile-catalogo.png" alt="Aplicativo Android: estado inicial do catálogo de serviços e materiais" width="1080" height="2408" loading="lazy"></a><figcaption><strong>Catálogo no celular.</strong> Estado inicial, antes de cadastrar serviços e materiais. Ações disponíveis seguem as permissões da conta.</figcaption></figure>
@@ -75,29 +77,37 @@
         <figure><a href="assets/painel-visao-geral.jpg"><img src="assets/painel-visao-geral.jpg" alt="Visão geral do painel web com indicadores e movimento financeiro fictício" width="1280" height="900" loading="lazy"></a><figcaption><strong>Visão geral.</strong> Indicadores e movimento financeiro após uma venda demonstrativa.</figcaption></figure>
         <figure><a href="assets/painel-catalogo.jpg"><img src="assets/painel-catalogo.jpg" alt="Tabela do catálogo no painel web com produtos fictícios por categoria" width="1280" height="720" loading="lazy"></a><figcaption><strong>Cadastro organizado.</strong> Busca e tabela de itens, categorias e preços.</figcaption></figure>
       </div>
-      <p class="note">Clique em um print para abrir a imagem completa. Não há credenciais, clientes reais ou documentos fiscais nas capturas publicadas.</p>
+      <p class="note">Clique em um print para abrir a imagem completa. As telas web usam uma demonstração local isolada; as capturas não comprovam sincronização entre dispositivos. Não há clientes reais ou documentos fiscais nas imagens.</p>
     </section>
-    <section id="tecnologia">
-      <div class="eyebrow">03 / A base técnica</div><h2>Uma base compartilhada, com operação a amadurecer.</h2>
-      <p class="intro">Flutter e Dart compartilham a base do app e do painel. A organização por funcionalidades separa apresentação, regras e acesso aos dados. Riverpod, GoRouter, Freezed, JsonSerializable e Dio compõem a stack do projeto.</p>
-      <div class="architecture" aria-label="Arquitetura atual resumida"><p class="label">Modo conectado atual</p><div class="flow"><div><strong>App + painel web</strong><small>Flutter · experiência por perfil</small></div><span class="arrow" aria-hidden="true">→</span><div><strong>Backend Supabase</strong><small>Auth · PostgreSQL · RLS · funções</small></div><span class="arrow" aria-hidden="true">→</span><div><strong>Dados do negócio</strong><small>Vínculo à empresa e permissões</small></div></div></div>
-      <div class="two"><article><h3>O que já sustenta a demonstração</h3><p>Backend compartilhado com autenticação, regras de acesso no servidor e atualização de dados. Alternativa local com SQLite, independente dos registros conectados. GitHub Pages hospeda o painel compilado; Firebase apoia métricas de uso.</p></article><article><h3>O que precisa de liderança técnica</h3><p>Separação de ambientes, migrações, restauração de backups, observabilidade, custos e capacidade. Na frente fiscal: integração externa, idempotência, processamento durável, recuperação de falhas e custódia segura de certificados.</p></article></div>
-      <div class="callout"><p><strong>Fiscal: preparação disponível, emissão pendente.</strong> Solicitar uma nota, organizar um lote ou preencher o cadastro fiscal não gera NF-e, NFC-e ou NFS-e autorizada. Fornecedor, certificado e homologação precisam ser definidos e validados por cenário.</p></div>
+    <section id="emissao" data-availability="planned">
+      <div class="eyebrow">03 / Emissão de notas</div><h2>Como a emissão está planejada.</h2>
+      <p class="intro">A proposta é conectar a gestão comercial à emissão fiscal, com acompanhamento do resultado no aplicativo e no painel. O fluxo abaixo é planejado e depende da integração com um provedor e da homologação de cada cenário.</p>
+      <div class="callout" id="limites-fiscais"><p><strong>Emissão fiscal autorizada ainda não disponível.</strong> Hoje há cadastro fiscal, solicitações e lotes preparatórios. Esses registros não geram NF-e, NFC-e ou NFS-e autorizada, nem substituem uma nota fiscal.</p></div>
+      <ol class="fiscal-steps" aria-label="Etapas planejadas da emissão fiscal">
+        <li class="card"><h3>Configurar a empresa</h3><p>Preparar os dados da empresa, seu perfil fiscal e os requisitos do cenário de emissão.</p></li>
+        <li class="card"><h3>Selecionar a operação</h3><p>Partir de uma venda ou serviço e identificar o documento adequado à operação.</p></li>
+        <li class="card"><h3>Conferir os dados</h3><p>Revisar destinatário, itens, valores e informações fiscais antes da solicitação.</p></li>
+        <li class="card"><h3>Solicitar a emissão</h3><p>Enviar a solicitação pelo sistema integrado e acompanhar seu processamento.</p></li>
+        <li class="card"><h3>Acompanhar o resultado</h3><p>Visualizar autorização, pendência ou rejeição e tratar os ajustes necessários.</p></li>
+        <li class="card"><h3>Acessar o documento</h3><p>Após a autorização, consultar e compartilhar o documento fiscal com o cliente.</p></li>
+      </ol>
+      <div class="two"><article><h3>Para produtos e serviços</h3><p>NF-e, NFC-e e NFS-e fazem parte do plano fiscal. A cobertura será definida conforme a atividade, a operação e o perfil da empresa, com validação dos cenários atendidos.</p></article><article><h3>O que será combinado antes de usar</h3><p>Provedor, requisitos de certificado quando aplicáveis, cobertura, implantação e condições de uso. Ainda não há emissão em produção nem prazo de disponibilidade confirmado.</p></article></div>
+      <p class="note">Registrar um pagamento e emitir uma nota são etapas distintas. A definição fiscal de cada operação será validada na implantação.</p>
     </section>
-    <section id="colaboracao">
-      <div class="eyebrow">04 / Uma conversa sobre colaboração</div><h2>Infraestrutura e fiscal são as próximas decisões centrais.</h2>
-      <p class="intro">A proposta é conversar sobre a participação de alguém experiente em servidores, bancos de dados e sistemas fiscais para ajudar a conduzir essa frente. A experiência prática pode acelerar decisões, melhorar a confiabilidade e apoiar a evolução do produto.</p>
-      <div class="grid"><article class="card"><span class="number">INFRAESTRUTURA</span><h3>Operar com confiança</h3><p>Desenhar ambientes, implantação, monitoramento, backups, recuperação e acompanhamento de custos.</p></article><article class="card"><span class="number">BANCO DE DADOS</span><h3>Evoluir com consistência</h3><p>Revisar isolamento entre empresas, índices, transações, concorrência, migrações e desempenho.</p></article><article class="card"><span class="number">FISCAL</span><h3>Integrar com critério</h3><p>Escolher provedor, validar cenários, proteger certificados e estruturar emissão, consulta e recuperação.</p></article></div>
-      <h3>Pontos para a reunião</h3><ol class="list"><li>Demonstrar os fluxos comerciais no celular e no painel.</li><li>Ouvir a avaliação sobre a base atual e os riscos prioritários.</li><li>Definir o primeiro cenário e uma prova fiscal em homologação.</li><li>Conversar sobre interesse, disponibilidade e responsabilidades.</li><li>Combinar um próximo passo técnico pequeno e verificável.</li></ol>
-      <p class="note" style="margin-top:20px">Responsabilidades, dedicação e formato de participação serão combinados entre as pessoas envolvidas; esta apresentação não estabelece compromisso comercial ou societário.</p>
+    <section id="demonstracao">
+      <div class="eyebrow">04 / Próximo passo</div><h2>Vamos olhar para a rotina do seu negócio?</h2>
+      <p class="intro">Uma demonstração ajuda a comparar os fluxos existentes com o que você precisa no dia a dia. O ponto de partida pode ser um orçamento de serviço, uma venda no comércio ou a organização financeira de uma loja virtual.</p>
+      <div class="grid"><article class="card"><span class="number">01 / SUA ROTINA</span><h3>Entender a necessidade</h3><p>Conte como você atende, vende, prepara orçamentos e confere os valores hoje.</p></article><article class="card"><span class="number">02 / DEMONSTRAÇÃO</span><h3>Ver um exemplo prático</h3><p>Percorra os módulos disponíveis com dados fictícios e identifique o que atende à sua operação.</p></article><article class="card"><span class="number">03 / VIABILIDADE</span><h3>Combinar o cenário</h3><p>Avalie requisitos fiscais, integrações e preparação para um eventual piloto. Escopo, condições e prazos dependem dessa avaliação.</p></article></div>
+      <div class="invitation"><h3>Comece conhecendo o produto.</h3><p>Veja as telas e leve seu cenário para uma conversa de demonstração. O acesso ao painel conectado é liberado por conta e vínculo autorizado a uma empresa.</p><a class="button" href="https://lucasalbertinazzi.github.io/notaagora-web/" target="_blank" rel="noopener noreferrer">Abrir a tela de acesso ao painel ↗</a></div>
     </section>
-    <section><div class="eyebrow">05 / Antes de testar</div><h2>O estágio atual, com clareza.</h2>
-      <details><summary>Já é possível apresentar o projeto?</summary><p>Sim, como demonstração técnica em desenvolvimento. Há fluxos comerciais implementados e telas reais para orientar a conversa. A apresentação comercial para clientes depende da homologação fiscal, da preparação operacional e da distribuição adequada.</p></details>
-      <details><summary>O link do painel dá acesso aos dados?</summary><p>O endereço abre a tela de acesso. Para usar os módulos conectados é preciso uma conta confirmada e vínculo autorizado a uma empresa. Esta apresentação não fornece conta, senha ou acesso a negócios existentes.</p></details>
-      <details><summary>Android e iOS estão no mesmo estágio de validação?</summary><p>A base atende Android e iOS. Android foi conferido em aparelho físico; o CI compila iOS sem assinatura. A instalação e a homologação física de iOS continuam pendentes.</p></details>
-      <details><summary>A documentação interna também é pública?</summary><p>Esta página reúne a visão de produto, capturas selecionadas e um resumo técnico. O código e a documentação operacional detalhada permanecem privados.</p></details>
+    <section id="duvidas"><div class="eyebrow">05 / Perguntas frequentes</div><h2>O que saber antes de começar.</h2>
+      <details><summary>O NotaAgora já está pronto para contratar e usar em produção?</summary><p>O produto está em desenvolvimento. Os módulos existentes podem ser demonstrados; implantação, operação de produção e distribuição comercial ainda precisam de preparação. Esta página apresenta uma prévia para avaliar o interesse e a adequação ao seu negócio.</p></details>
+      <details><summary>Já posso emitir notas fiscais?</summary><p>Ainda não. O cadastro fiscal e as solicitações são preparatórios. A emissão autorizada depende da integração, homologação e validação da cobertura para sua empresa, conforme o fluxo planejado acima.</p></details>
+      <details><summary>Minha loja virtual será integrada automaticamente?</summary><p>Ainda não há integração automática com lojas virtuais ou marketplaces. O uso demonstrável é a organização interna com cadastros e lançamentos manuais. Pedidos, checkout, frete e automações por plataforma serão avaliados como evolução futura.</p></details>
+      <details><summary>Preciso de uma conta para ver a apresentação?</summary><p>Esta página e os prints abrem sem login. O painel conectado exige conta confirmada e vínculo autorizado a uma empresa; o link abre sua tela de acesso.</p></details>
+      <details><summary>Posso usar no celular e no computador?</summary><p>Há aplicativo Android e painel web. O Android foi conferido em aparelho físico. A base iOS existe, mas instalação e validação em iPhone ainda estão pendentes. A disponibilidade comercial será definida na preparação do produto.</p></details>
     </section>
   </main>
-  <footer><div class="wrap"><strong>NotaAgora</strong> · Do serviço à nota.<br>Apresentação do projeto · Revisada em 06/10/2026 · <a href="https://lucasalbertinazzi.github.io/notaagora-web/">Abrir painel conectado</a></div></footer>
+  <footer><div class="wrap"><strong>NotaAgora</strong> · Gestão para comércio e serviços.<br>Prévia comercial · Revisada em 06/10/2026 · <a href="#demonstracao">Conhecer os próximos passos</a></div></footer>
 </body>
 </html>
